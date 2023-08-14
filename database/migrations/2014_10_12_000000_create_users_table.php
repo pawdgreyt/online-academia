@@ -21,6 +21,7 @@ return new class extends Migration
             $table->string('provider_id')->nullable();
             $table->string('provider_token')->nullable();
             $table->string('auth_type');
+            $table->string('role');
             $table->rememberToken();
             $table->timestamps();
         });

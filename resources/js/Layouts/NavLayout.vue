@@ -33,7 +33,7 @@ const resize = () => {
 
 const isNavOverlay = () => {
     if (usePage().url === "/") openSideNav.value = !openSideNav.value;
-    if (usePage().url === "/add-video")
+    if (usePage().url === "/view_course/1")
         openSideNavOverlay.value = !openSideNavOverlay.value;
     if (usePage().url === "/delete-video")
         openSideNavOverlay.value = !openSideNavOverlay.value;
@@ -42,7 +42,7 @@ const isNavOverlay = () => {
     if (width.value < 640) openSideNavOverlay.value = !openSideNavOverlay.value;
     if (usePage().url !== "/" && width.value < 640)
         openSideNavOverlay.value = !openSideNavOverlay.value;
-    if (usePage().props.video)
+    if (usePage().props.view_course)
         openSideNavOverlay.value = !openSideNavOverlay.value;
 };
 </script>

@@ -27,12 +27,14 @@ defineProps({
         <div
             class="grid 2xl:grid-cols-5 xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-2"
         >
-            <CourseCard
-                title="Full Course Nuxt Js 3"
-                instructor="Professor X"
-                image="https://cdn.iconscout.com/icon/free/png-512/free-avatar-366-456318.png?f=avif&w=256"
-                thumbnail="course/nuxt.jpg"
-            />
+            <Link :href="route('course.show', { id: 1 })">
+                <CourseCard
+                    title="Full Course Nuxt Js 3"
+                    instructor="Professor X"
+                    image="https://cdn.iconscout.com/icon/free/png-512/free-avatar-366-456318.png?f=avif&w=256"
+                    thumbnail="course/nuxt.jpg"
+                />
+            </Link>
         </div>
     </NavLayout>
 </template>
