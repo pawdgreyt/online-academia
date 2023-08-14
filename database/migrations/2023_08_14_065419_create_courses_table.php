@@ -19,6 +19,7 @@ return new class extends Migration
             $table->text('rating');
             $table->text('orig_price');
             $table->text('current_price');
+            $table->text('number_of_purchase');
             $table->timestamps();
         });
     }
