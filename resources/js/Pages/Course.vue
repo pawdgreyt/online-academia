@@ -21,17 +21,19 @@ defineProps({
                     </h2>
                     <p class="text-white mb-4">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Vivamus feugiat lacinia dolor, at consequat ligula
-                        feugiat eu.
-                    </p>
-                    <p class="text-white mb-4">
-                        Quisque aliquet, tortor sed condimentum bibendum, eros
-                        nulla fermentum quam, a scelerisque quam urna quis
-                        nulla.
-                    </p>
-                    <p class="text-white">
-                        Nulla facilisi. Pellentesque habitant morbi tristique
-                        senectus et netus et malesuada fames ac turpis egestas.
+                        Nulla urna neque, malesuada in mollis a, dictum nec mi.
+                        In hac habitasse platea dictumst. Fusce et congue
+                        turpis. Class aptent taciti sociosqu ad litora torquent
+                        per conubia nostra, per inceptos himenaeos. Ut faucibus
+                        libero in nibh sollicitudin vestibulum. Fusce ac
+                        malesuada leo. Duis vitae enim sem. Aliquam ultrices
+                        elit id neque sodales, sit amet aliquam turpis
+                        tincidunt. Phasellus sollicitudin metus ut tempus
+                        luctus. Proin accumsan mattis tempus. Donec est orci,
+                        efficitur blandit aliquam quis, ultricies at ipsum.
+                        Donec ac augue id tortor elementum mollis. Quisque
+                        elementum est quis sem tempor rhoncus. Quisque vel nisi
+                        felis.
                     </p>
                 </div>
                 <div class="bg-gray-800 rounded-lg p-6">
@@ -67,7 +69,7 @@ defineProps({
                         </div>
                     </div>
                     <button
-                        class="mt-3 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700"
+                        class="mt-3 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-800 duration-300"
                     >
                         Enroll Now
                     </button>
@@ -90,7 +92,18 @@ defineProps({
                                     Episode 1: Introduction
                                 </h3>
                                 <p class="text-gray-400">
-                                    A brief overview of the series.
+                                    A brief overview of the series. Lorem ipsum
+                                    dolor sit amet, consectetur adipiscing elit.
+                                    Nulla urna neque, malesuada in mollis a,
+                                    dictum nec mi. In hac habitasse platea
+                                    dictumst. Fusce et congue turpis. Class
+                                    aptent taciti sociosqu ad litora torquent
+                                    per conubia nostra, per inceptos himenaeos.
+                                    Ut faucibus libero in nibh sollicitudin
+                                    vestibulum. Fusce ac malesuada leo. Duis
+                                    vitae enim sem. Aliquam ultrices elit id
+                                    neque sodales, sit amet aliquam turpis
+                                    tincidunt.
                                 </p>
                             </div>
                         </li>
@@ -107,7 +120,18 @@ defineProps({
                                     Episode 2: Getting Started
                                 </h3>
                                 <p class="text-gray-400">
-                                    Setting up your environment.
+                                    Setting up your environment. Lorem ipsum
+                                    dolor sit amet, consectetur adipiscing elit.
+                                    Nulla urna neque, malesuada in mollis a,
+                                    dictum nec mi. In hac habitasse platea
+                                    dictumst. Fusce et congue turpis. Class
+                                    aptent taciti sociosqu ad litora torquent
+                                    per conubia nostra, per inceptos himenaeos.
+                                    Ut faucibus libero in nibh sollicitudin
+                                    vestibulum. Fusce ac malesuada leo. Duis
+                                    vitae enim sem. Aliquam ultrices elit id
+                                    neque sodales, sit amet aliquam turpis
+                                    tincidunt.
                                 </p>
                             </div>
                         </li>
