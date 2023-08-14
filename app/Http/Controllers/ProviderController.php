@@ -35,6 +35,7 @@ class ProviderController extends Controller
                 'email' => $user->email,
                 'provider_token' => $user->token,
                 'auth_type' => $provider,
+                'role' => 'student',
                 'password' => Hash::make(Str::random(10)),
             ]);
 

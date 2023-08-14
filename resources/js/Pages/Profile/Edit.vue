@@ -36,6 +36,11 @@ defineProps({
                 </div>
 
                 <div class="p-4 sm:p-8 bg-white shadow sm:rounded-lg">
+                    <h2>My Courses</h2>
+                    <!-- Courses Component here -->
+                </div>
+
+                <div class="p-4 sm:p-8 bg-white shadow sm:rounded-lg">
                     <UpdatePasswordForm class="max-w-xl" />
                 </div>
 
