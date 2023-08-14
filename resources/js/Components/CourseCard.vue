@@ -47,8 +47,8 @@
                             <Star fillColor="#FFD700" :size="17" />
                             <StarHalfFull fillColor="#FFD700" :size="17" />
                         </div>
-                        <div class="text-sm mb-1 text-gray-300 cursor-pointer">
-                            {{ views }}
+                        <div class="text-sm mb-1 mt-2 text-gray-300">
+                            Php 1,499
                         </div>
                     </div>
                 </div>
