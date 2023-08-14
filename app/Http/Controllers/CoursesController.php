@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Courses;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
+use Illuminate\Support\Facades\DB;
 
 class CoursesController extends Controller
 {
@@ -35,8 +36,13 @@ class CoursesController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Courses $courses)
-    {
+    public function show($id)
+    {   
+        // return Inertia::render('Course', [
+        //     'course' => Courses::select('courses.*')
+        //         ->find($id),
+        //     'episodes' => DB::table('course_episodes')->where('course_id', $id)->get()
+        // ]);
         return Inertia::render('Course', []);
     }
 
