@@ -45,9 +45,8 @@ const submit = () => {
         <div class="text-center">
             <a href="auth/github/redirect" class="inline-block">
                 <img
-                    :src="'https://icon-library.com/images/github-icon-svg/github-icon-svg-17.jpg'"
+                    :src="'https://icon-library.com/images/github-icon/github-icon-15.jpg'"
                     alt="Github Icon"
-                    width="50px"
                     class="rounded-full mt-2 w-12 h-12"
                 />
             </a>
@@ -55,7 +54,6 @@ const submit = () => {
                 <img
                     :src="'https://icon-library.com/images/free-google-icon/free-google-icon-17.jpg'"
                     alt="Google Icon"
-                    width="50px"
                     class="rounded-full mt-2 w-12 h-12 ml-3"
                 />
             </a>
@@ -74,8 +72,6 @@ const submit = () => {
                     autofocus
                     autocomplete="username"
                 />
-
-                <InputError class="mt-2" :message="form.errors.email" />
 
                 <div v-if="$page.props.errors" class="text-red-600">
                     {{ $page.props.errors.email }}
