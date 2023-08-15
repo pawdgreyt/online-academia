@@ -23,8 +23,12 @@ Route::middleware('auth')->group(function () {
         return Inertia::render('Welcome');
     })->name('home');
 
-    Route::get('/view_course/{id}', [CoursesController::class, 'show'])->name('course.show');
+    Route::get('/view-course/{id}', [CoursesController::class, 'show'])->name('course.show');
     Route::get('/watch/{id}', [CoursesController::class, 'watchepisode'])->name('course.watchepisode');
+
+    
+    Route::get('/add-course', function () {return Inertia::render('AddCourse'); })->name('addCourse');
+    Route::post('/addcourse', [CoursesController::class, 'store'])->name('course.store');
 
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
