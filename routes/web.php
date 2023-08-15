@@ -24,6 +24,7 @@ Route::middleware('auth')->group(function () {
     })->name('home');
 
     Route::get('/view_course/{id}', [CoursesController::class, 'show'])->name('course.show');
+    Route::get('/watch/{id}', [CoursesController::class, 'watchepisode'])->name('course.watchepisode');
 
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');

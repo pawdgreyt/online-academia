@@ -46,6 +46,10 @@ class CoursesController extends Controller
         return Inertia::render('Course', []);
     }
 
+    public function watchepisode(){
+        return Inertia::render('WatchEpisode', []);
+    }
+
     /**
      * Show the form for editing the specified resource.
      */
