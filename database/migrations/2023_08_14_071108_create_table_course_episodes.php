@@ -15,6 +15,8 @@ return new class extends Migration
             $table->id();
             $table->foreignId('course_id')->nullable()->constrained('courses')->nullOnDelete();
             $table->text('episode_number');
+            $table->text('episode_title');
+            $table->text('episode_description');
             $table->text('episode_thumbnail');
             $table->text('episode_video');
             $table->timestamps();
