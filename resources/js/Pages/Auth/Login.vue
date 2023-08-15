@@ -6,6 +6,8 @@ import InputLabel from "@/Components/InputLabel.vue";
 import PrimaryButton from "@/Components/PrimaryButton.vue";
 import TextInput from "@/Components/TextInput.vue";
 import { Head, Link, useForm } from "@inertiajs/vue3";
+import { computed } from "vue";
+// import { usePage } from "@inertiajs/vue3";
 
 defineProps({
     canResetPassword: {
@@ -27,6 +29,9 @@ const submit = () => {
         onFinish: () => form.reset("password"),
     });
 };
+// const page = usePage();
+
+// console.log(page.props.errors.email);
 </script>
 
 <template>
@@ -71,6 +76,10 @@ const submit = () => {
                 />
 
                 <InputError class="mt-2" :message="form.errors.email" />
+
+                <div v-if="$page.props.errors" class="text-red-600">
+                    {{ $page.props.errors.email }}
+                </div>
             </div>
 
             <div class="mt-4">
