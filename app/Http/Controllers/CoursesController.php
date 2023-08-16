@@ -109,9 +109,6 @@ class CoursesController extends Controller
 
             return redirect()->route('course.show', $course['id']);
         }
-
-        
-
     }
 
     /**
@@ -119,16 +116,23 @@ class CoursesController extends Controller
      */
     public function show($id)
     {   
-        // return Inertia::render('Course', [
-        //     'course' => Courses::select('courses.*')
-        //         ->find($id),
-        //     'episodes' => DB::table('course_episodes')->where('course_id', $id)->get()
-        // ]);
-        return Inertia::render('Course', []);
+        return Inertia::render('Course', [
+            'course' => Courses::select('courses.*')
+                ->find($id),
+            'episodes' => DB::table('course_episodes')->where('course_id', $id)->get()
+        ]);
+        // return Inertia::render('Course', []);
     }
 
-    public function watchepisode(){
-        return Inertia::render('WatchEpisode', []);
+    public function watchepisode($id){
+        $episode_details = DB::table('course_episodes')->find($id);
+
+        return Inertia::render('WatchEpisode', [
+            'episode_details' => DB::table('course_episodes')->select('course_episodes.*','courses.instructor')
+                ->join('courses', 'course_episodes.course_id', '=', 'courses.id')
+                ->where('course_episodes.id',$id)->first(),
+            'other_episodes' => DB::table('course_episodes')->where('course_id', $episode_details->course_id)->get()
+        ]);
     }
 
     /**

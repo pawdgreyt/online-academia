@@ -1,6 +1,8 @@
 <template>
     <div class="relative">
         <div
+            @mouseover="show = true"
+            @mouseleave="show = false"
             class="rounded-lg bg-gray-800 ms-2"
             :class="[
                 show && width > 639
@@ -8,7 +10,7 @@
                     : '',
             ]"
         >
-            <div @mouseover="show = true" @mouseleave="show = false">
+            <div>
                 <img
                     :class="
                         show
@@ -47,8 +49,13 @@
                             <Star fillColor="#FFD700" :size="17" />
                             <StarHalfFull fillColor="#FFD700" :size="17" />
                         </div>
-                        <div class="text-sm mb-1 mt-2 text-gray-300">
-                            Php 1,499
+                        <div class="text-sm mb-1 mt-2 text-gray-200">
+                            <span
+                                class="text-gray-400 line-through"
+                                v-if="orig_price > current_price"
+                                >Php {{ orig_price }}</span
+                            >
+                            Php {{ current_price }}
                         </div>
                     </div>
                 </div>
@@ -68,9 +75,20 @@ const props = defineProps({
     image: String,
     thumbnail: String,
     rating: String,
+    overview: String,
+    current_price: String,
+    orig_price: String,
 });
 
-const { title, instructor, image, thumbnail, rating } = toRefs(props);
+const {
+    title,
+    instructor,
+    image,
+    thumbnail,
+    rating,
+    current_price,
+    orig_price,
+} = toRefs(props);
 
 let show = ref(false);
 let width = ref(document.documentElement.clientWidth);
