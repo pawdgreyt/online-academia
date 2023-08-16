@@ -79,11 +79,6 @@ const addCourse = () => {
         return episode; // Return the modified episode to keep reactivity
     });
 
-    // console.log data form
-    // for (var pair of data.entries()) {
-    //     console.log(pair[0] + ", " + pair[1]);
-    // }
-
     router.post("/addcourse", data);
 };
 
@@ -255,7 +250,7 @@ const removeEpisode = (index) => {
                             </div>
                             <div class="w-full px-3 rounded-sm mt-3">
                                 <table
-                                    class="table-fixed border bg-white w-full"
+                                    class="table-auto border bg-white w-full"
                                 >
                                     <thead v-if="episodes.length > 0">
                                         <tr>
@@ -343,6 +338,7 @@ const removeEpisode = (index) => {
                                                     @click="
                                                         removeEpisode(index)
                                                     "
+                                                    :disabled="index == 0"
                                                     class="bg-red-600 text-white p-3 rounded-sm"
                                                 >
                                                     Delete

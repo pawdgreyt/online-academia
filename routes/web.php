@@ -6,6 +6,7 @@ use App\Http\Controllers\CoursesController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
+use App\Models\Courses;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,9 +20,7 @@ use Inertia\Inertia;
 */
 
 Route::middleware('auth')->group(function () {
-    Route::get('/', function () {
-        return Inertia::render('Welcome');
-    })->name('home');
+    Route::get('/', function () { return Inertia::render('Welcome', [ 'courses' => Courses::OrderBy('id', 'DESC')->get() ]); })->name('home');
 
     Route::get('/view-course/{id}', [CoursesController::class, 'show'])->name('course.show');
     Route::get('/watch/{id}', [CoursesController::class, 'watchepisode'])->name('course.watchepisode');

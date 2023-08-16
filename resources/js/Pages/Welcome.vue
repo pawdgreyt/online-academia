@@ -4,20 +4,7 @@ import NavLayout from "@/Layouts/NavLayout.vue";
 import CourseCard from "@/Components/CourseCard.vue";
 
 defineProps({
-    canLogin: {
-        type: Boolean,
-    },
-    canRegister: {
-        type: Boolean,
-    },
-    laravelVersion: {
-        type: String,
-        required: true,
-    },
-    phpVersion: {
-        type: String,
-        required: true,
-    },
+    courses: Array,
 });
 </script>
 
@@ -27,14 +14,19 @@ defineProps({
         <div
             class="grid 2xl:grid-cols-5 xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-2"
         >
-            <Link :href="route('course.show', { id: 1 })">
-                <CourseCard
-                    title="Full Course Nuxt Js 3"
-                    instructor="Professor X"
-                    image="https://cdn.iconscout.com/icon/free/png-512/free-avatar-366-456318.png?f=avif&w=256"
-                    thumbnail="course/nuxt.jpg"
-                />
-            </Link>
+            <div v-for="(course, index) in courses" :key="course">
+                <Link :href="route('course.show', { id: course.id })">
+                    <CourseCard
+                        :title="course.title"
+                        :instructor="course.instructor"
+                        :overview="course.overview"
+                        :image="`https://picsum.photos/${course.id + 190}/300`"
+                        :thumbnail="course.thumbnail"
+                        :current_price="course.current_price"
+                        :orig_price="course.orig_price"
+                    />
+                </Link>
+            </div>
         </div>
     </NavLayout>
 </template>

@@ -43,18 +43,24 @@ const submit = () => {
         </div>
 
         <div class="text-center">
-            <a href="auth/github/redirect" class="inline-block">
+            <a
+                href="auth/github/redirect"
+                class="inline-block bg-white p-2 rounded-md hover:bg-gray-300 duration-300"
+            >
                 <img
                     :src="'https://icon-library.com/images/github-icon/github-icon-15.jpg'"
                     alt="Github Icon"
-                    class="rounded-full mt-2 w-12 h-12"
+                    class="rounded-full w-12 h-12"
                 />
             </a>
-            <a href="auth/google/redirect" class="inline-block">
+            <a
+                href="auth/google/redirect"
+                class="inline-block bg-white p-2 rounded-md ml-2 hover:bg-gray-300 duration-300"
+            >
                 <img
                     :src="'https://icon-library.com/images/free-google-icon/free-google-icon-17.jpg'"
                     alt="Google Icon"
-                    class="rounded-full mt-2 w-12 h-12 ml-3"
+                    class="rounded-full w-12 h-12"
                 />
             </a>
         </div>

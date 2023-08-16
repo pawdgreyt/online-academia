@@ -33,10 +33,6 @@ const resize = () => {
 
 const isNavOverlay = () => {
     if (usePage().url === "/") openSideNav.value = !openSideNav.value;
-    if (usePage().url === "/view-course/1")
-        openSideNavOverlay.value = !openSideNavOverlay.value;
-    if (usePage().url === "/watch/1")
-        openSideNavOverlay.value = !openSideNavOverlay.value;
     if (usePage().url === "/add-course")
         openSideNavOverlay.value = !openSideNavOverlay.value;
     if (usePage().url === "/profile")
@@ -44,7 +40,9 @@ const isNavOverlay = () => {
     if (width.value < 640) openSideNavOverlay.value = !openSideNavOverlay.value;
     if (usePage().url !== "/" && width.value < 640)
         openSideNavOverlay.value = !openSideNavOverlay.value;
-    if (usePage().props.view_course)
+    if (usePage().props.course)
+        openSideNavOverlay.value = !openSideNavOverlay.value;
+    if (usePage().props.episode_details)
         openSideNavOverlay.value = !openSideNavOverlay.value;
 };
 </script>
