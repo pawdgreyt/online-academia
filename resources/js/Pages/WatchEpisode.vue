@@ -67,7 +67,7 @@ const page = usePage();
                                     class="w-full flex items-center space-x-4 rounded-lg"
                                     :class="
                                         page.url == '/watch/' + other.id
-                                            ? 'bg-gray-600 h-[200px] hover:bg-gray-600'
+                                            ? 'bg-gray-600  hover:bg-gray-600'
                                             : 'hover:bg-gray-900'
                                     "
                                 >
@@ -97,7 +97,7 @@ const page = usePage();
                                                 fillColor="#FFFFFF"
                                                 :size="25"
                                             />
-                                            <span class="font-bold"
+                                            <span class="font-extrabold"
                                                 >NOW PLAYING</span
                                             >
                                         </div>
