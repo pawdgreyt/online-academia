@@ -121,7 +121,6 @@ class CoursesController extends Controller
                 ->find($id),
             'episodes' => DB::table('course_episodes')->where('course_id', $id)->get()
         ]);
-        // return Inertia::render('Course', []);
     }
 
     public function watchepisode($id){

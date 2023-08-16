@@ -105,44 +105,6 @@ const page = usePage();
                                 </li>
                             </Link>
                         </div>
-                        <!-- <Link
-                            :href="route('course.watchepisode', { id: 1 })"
-                            class="flex items-center justify-center cursor-pointer"
-                        >
-                            <li
-                                class="w-full flex items-center space-x-4 hover:bg-gray-900 rounded-lg"
-                            >
-                                <div class="flex-shrink-0">
-                                    <img
-                                        class="h-40 w-60 rounded-md"
-                                        src="/course/nuxt.jpg"
-                                        alt="Video Thumbnail"
-                                    />
-                                </div>
-                                <div class="flex-grow">
-                                    <h3
-                                        class="text-lg font-semibold text-white"
-                                    >
-                                        Episode 2: Getting Started
-                                    </h3>
-                                    <p class="text-gray-400">
-                                        Setting up your environment. Lorem ipsum
-                                        dolor sit amet, consectetur adipiscing
-                                        elit. Nulla urna neque, malesuada in
-                                        mollis a, dictum nec mi. In hac
-                                        habitasse platea dictumst. Fusce et
-                                        congue turpis. Class aptent taciti
-                                        sociosqu ad litora torquent per conubia
-                                        nostra, per inceptos himenaeos. Ut
-                                        faucibus libero in nibh sollicitudin
-                                        vestibulum. Fusce ac malesuada leo. Duis
-                                        vitae enim sem. Aliquam ultrices elit id
-                                        neque sodales, sit amet aliquam turpis
-                                        tincidunt.
-                                    </p>
-                                </div>
-                            </li>
-                        </Link> -->
                     </ul>
                 </div>
             </div>
