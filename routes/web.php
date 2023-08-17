@@ -24,10 +24,11 @@ Route::middleware('auth')->group(function () {
 
     Route::get('/view-course/{id}', [CoursesController::class, 'show'])->name('course.show');
     Route::get('/watch/{id}', [CoursesController::class, 'watchepisode'])->name('course.watchepisode');
-
+    Route::get('/manage-course', function () { return Inertia::render('ManageCourse', [ 'courses' => Courses::OrderBy('id', 'DESC')->get() ]); })->name('manageCourses');
     
     Route::get('/add-course', function () {return Inertia::render('AddCourse'); })->name('addCourse');
     Route::post('/addcourse', [CoursesController::class, 'store'])->name('course.store');
+    Route::delete('/videos/{id}', [CoursesController::class, 'destroy'])->name('course.destroy');
 
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');

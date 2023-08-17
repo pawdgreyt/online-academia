@@ -139,6 +139,12 @@ const isNavOverlay = () => {
                             iconString="Create Course"
                         />
                     </Link>
+                    <Link :href="route('manageCourses')">
+                        <SideNavItem
+                            :openSideNav="openSideNav"
+                            iconString="Manage Courses"
+                        />
+                    </Link>
                     <SideNavItem
                         :openSideNav="openSideNav"
                         iconString="Manage Students"
@@ -150,7 +156,7 @@ const isNavOverlay = () => {
                     />
                     <SideNavItem
                         :openSideNav="openSideNav"
-                        iconString="Library"
+                        iconString="My Library"
                     />
                 </ul>
             </div>
@@ -201,10 +207,16 @@ const isNavOverlay = () => {
                         :openSideNav="true"
                         iconString="Create Course"
                 /></Link>
+                <Link :href="route('manageCourses')">
+                    <SideNavItem
+                        :openSideNav="openSideNav"
+                        iconString="Manage Courses"
+                    />
+                </Link>
                 <SideNavItem :openSideNav="true" iconString="Manage Students" />
                 <div class="border-b border-white my-2.5"></div>
                 <SideNavItem :openSideNav="true" iconString="Courses" />
-                <SideNavItem :openSideNav="true" iconString="Library" />
+                <SideNavItem :openSideNav="true" iconString="My Library" />
             </ul>
         </div>
         <!-- OVERLAY NAV SECTION END -->

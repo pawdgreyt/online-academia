@@ -21,6 +21,7 @@ import ChairSchool from "vue-material-design-icons/ChairSchool.vue";
 import Library from "vue-material-design-icons/Library.vue";
 import AccountSchool from "vue-material-design-icons/AccountSchool.vue";
 import BookPlus from "vue-material-design-icons/BookPlus.vue";
+import BookMultiple from "vue-material-design-icons/BookMultiple.vue";
 
 const props = defineProps({
     openSideNav: Boolean,
@@ -33,7 +34,8 @@ let icon = null;
 
 if (iconString.value === "Home") icon = Home;
 if (iconString.value === "Courses") icon = ChairSchool;
-if (iconString.value === "Library") icon = Library;
+if (iconString.value === "My Library") icon = Library;
 if (iconString.value === "Manage Students") icon = AccountSchool;
 if (iconString.value === "Create Course") icon = BookPlus;
+if (iconString.value === "Manage Courses") icon = BookMultiple;
 </script>
