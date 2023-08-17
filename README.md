@@ -81,6 +81,10 @@ This is an E-Learning System built using Laravel 10, Breeze, Socialite, Vue.js 3
    npm run dev
 
 11. Visit http://localhost:8000 in your browser to access the application.
+
+ADMIN SEEDER ACCOUNT:
+admin@email.com
+password1234
    
 
    
