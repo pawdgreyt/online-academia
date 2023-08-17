@@ -41,54 +41,56 @@ class CoursesController extends Controller
             $episodes = $request->input('episodes');
             $episodesfile = $request->file('episodes');
 
-            foreach ($episodes as $index => $episode) {
-                // Handle thumbnail image upload
-                if (isset($episodesfile[$index]['thumbnail'])) {
-                    $thumbnailFile = $episodesfile[$index]['thumbnail'];
-                    
-                    // Get the original extension of the uploaded thumbnail
-                    $extension = $thumbnailFile->getClientOriginalExtension();
-                    
-                    // Generate a unique name for the thumbnail
-                    $thumbnailName = 'episodeThumbnail' . $index . time() . '.' . $extension;
-                    
-                    // Move the thumbnail file to the appropriate directory
-                    $thumbnailFile->move(public_path('/videos/thumbnails/'), $thumbnailName);
-                    
-                    $thumbnailNamePath = '/videos/thumbnails/' . $thumbnailName;
-                } else {
-                    $thumbnailNamePath = "";
-                }
+            if($episodes){
+                foreach ($episodes as $index => $episode) {
+                    // Handle thumbnail image upload
+                    if (isset($episodesfile[$index]['thumbnail'])) {
+                        $thumbnailFile = $episodesfile[$index]['thumbnail'];
+                        
+                        // Get the original extension of the uploaded thumbnail
+                        $extension = $thumbnailFile->getClientOriginalExtension();
+                        
+                        // Generate a unique name for the thumbnail
+                        $thumbnailName = 'episodeThumbnail' . $index . time() . '.' . $extension;
+                        
+                        // Move the thumbnail file to the appropriate directory
+                        $thumbnailFile->move(public_path('/videos/thumbnails/'), $thumbnailName);
+                        
+                        $thumbnailNamePath = '/videos/thumbnails/' . $thumbnailName;
+                    } else {
+                        $thumbnailNamePath = "";
+                    }
 
-                // Handle video upload
-                if (isset($episodesfile[$index]['video'])) {
-                    $videoFile = $episodesfile[$index]['video'];
-                    
-                    // Get the original extension of the uploaded video
-                    $extension = $videoFile->getClientOriginalExtension();
-                    
-                    // Generate a unique name for the video
-                    $videoName = 'episodeName' . $index . time() . '.' . $extension;
-                    
-                    // Move the video file to the appropriate directory
-                    $videoFile->move(public_path('/videos/'), $videoName);
-                    
-                    $videoPath = '/videos/' . $videoName;
-                } else {
-                    $videoPath = "";
-                }
+                    // Handle video upload
+                    if (isset($episodesfile[$index]['video'])) {
+                        $videoFile = $episodesfile[$index]['video'];
+                        
+                        // Get the original extension of the uploaded video
+                        $extension = $videoFile->getClientOriginalExtension();
+                        
+                        // Generate a unique name for the video
+                        $videoName = 'episodeName' . $index . time() . '.' . $extension;
+                        
+                        // Move the video file to the appropriate directory
+                        $videoFile->move(public_path('/videos/'), $videoName);
+                        
+                        $videoPath = '/videos/' . $videoName;
+                    } else {
+                        $videoPath = "";
+                    }
 
-                // Insert the episode data into the database
-                DB::table('course_episodes')->insert([
-                    'course_id' => $course->id,
-                    'episode_number' => $index + 1,
-                    'episode_title' => $episode['title'],
-                    'episode_description' => $episode['description'],
-                    'episode_thumbnail' => $thumbnailNamePath,
-                    'episode_video' => $videoPath,
-                    'created_at' => now(),
-                    'updated_at' => now(),
-                ]);
+                    // Insert the episode data into the database
+                    DB::table('course_episodes')->insert([
+                        'course_id' => $course->id,
+                        'episode_number' => $index + 1,
+                        'episode_title' => $episode['title'],
+                        'episode_description' => $episode['description'],
+                        'episode_thumbnail' => $thumbnailNamePath,
+                        'episode_video' => $videoPath,
+                        'created_at' => now(),
+                        'updated_at' => now(),
+                    ]);
+                }
             }
 
             return redirect()->route('course.show', $course['id']);

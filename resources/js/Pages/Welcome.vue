@@ -12,7 +12,7 @@ defineProps({
     <Head title="Home" />
     <NavLayout>
         <div
-            class="grid 2xl:grid-cols-5 xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-2"
+            class="grid 2xl:grid-cols-5 xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-2 pr-1 pt-1"
         >
             <div v-for="(course, index) in courses" :key="course">
                 <Link :href="route('course.show', { id: course.id })">

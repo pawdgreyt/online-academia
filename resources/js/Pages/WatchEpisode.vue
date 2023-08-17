@@ -9,6 +9,17 @@ defineProps({
 });
 
 const page = usePage();
+
+const trimLongText = (string, length) => {
+    if (string.length <= length) {
+        return string;
+    } else {
+        const trimmedString = string.slice(0, length).trim();
+        const trimmedStringWithEllipsis = trimmedString + "...";
+
+        return trimmedStringWithEllipsis;
+    }
+};
 </script>
 
 <template>
@@ -43,6 +54,11 @@ const page = usePage();
                             {{ episode_details.instructor }}
                         </div>
                     </div>
+                    <p
+                        class="text-gray-400 mt-2 flex items-center justify-center"
+                    >
+                        {{ episode_details.episode_description }}
+                    </p>
                 </div>
                 <div
                     class="md:col-span-3 bg-gray-800 rounded-lg p-6 flex flex-col text-white"
@@ -85,7 +101,12 @@ const page = usePage();
                                             {{ other.episode_title }}
                                         </h3>
                                         <p class="text-gray-400">
-                                            {{ other.episode_description }}
+                                            {{
+                                                trimLongText(
+                                                    other.episode_description,
+                                                    150
+                                                )
+                                            }}
                                         </p>
                                         <div
                                             class="text-white flex mt-3 items-center"
