@@ -92,9 +92,16 @@ const isNavOverlay = () => {
 
                             <div>
                                 <img
+                                    v-if="$page.props.auth.user.role != 'admin'"
                                     class="rounded-full ml-2"
                                     width="35"
                                     src="/images/astronaut.png"
+                                />
+                                <img
+                                    v-else
+                                    class="rounded-full ml-2 bg-slate-400"
+                                    width="35"
+                                    src="/images/admin.png"
                                 />
                             </div>
                         </button>
