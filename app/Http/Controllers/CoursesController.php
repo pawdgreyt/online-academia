@@ -128,7 +128,29 @@ class CoursesController extends Controller
         $course_id = $course->id; // Id of Course
 
         $course_episodes = DB::table('course_episodes')->where('course_id', $course_id)->get(); // Course Episodes
+        // delete all episodes
+        if ($course_episodes) {
+            foreach ($course_episodes as $episode) {
+                // delete the episode thumbnail
+                if (file_exists(public_path() . $episode->episode_thumbnail)) {
+                    unlink(public_path() . $episode->episode_thumbnail);
+                }
+                // delete the episode video
+                if (file_exists(public_path() . $episode->episode_video)) {
+                    unlink(public_path() . $episode->episode_video);
+                }
 
-        dd($course);
+                // delete the database record
+                DB::table('course_episodes')->where('id', $episode->id)->delete();
+            }
+        }
+
+        // course thumbnail delete
+        if (file_exists(public_path() . $course->thumbnail)) {
+            unlink(public_path() . $course->thumbnail);
+        }
+
+        $course->delete();
+        return redirect()->route('manageCourses');
     }
 }
