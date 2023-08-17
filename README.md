@@ -25,6 +25,8 @@ This is an E-Learning System built using Laravel 10, Breeze, Socialite, Vue.js 3
 
 7. Watch Episodes: Dive into course content by watching individual episodes. Take advantage of the flexibility to pause, rewind, or rewatch episodes to grasp the concepts effectively.
 ![image](https://github.com/pawdgreyt/online-academia/assets/52988042/2a3ca2b3-6e9f-4920-9551-85734888ce36)
+![image](https://github.com/pawdgreyt/online-academia/assets/52988042/6619cca7-8a72-43f4-9594-946693f40c78)
+
 
 ### Installation
 
