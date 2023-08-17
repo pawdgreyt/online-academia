@@ -121,8 +121,14 @@ class CoursesController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Courses $courses)
+    public function destroy($id)
     {
-        // TODO
+        $course = Courses::find($id); // Course Details
+
+        $course_id = $course->id; // Id of Course
+
+        $course_episodes = DB::table('course_episodes')->where('course_id', $course_id)->get(); // Course Episodes
+
+        dd($course);
     }
 }

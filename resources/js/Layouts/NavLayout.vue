@@ -35,6 +35,8 @@ const isNavOverlay = () => {
     if (usePage().url === "/") openSideNav.value = !openSideNav.value;
     if (usePage().url === "/add-course")
         openSideNavOverlay.value = !openSideNavOverlay.value;
+    if (usePage().url === "/manage-course")
+        openSideNavOverlay.value = !openSideNavOverlay.value;
     if (usePage().url === "/profile")
         openSideNavOverlay.value = !openSideNavOverlay.value;
     if (width.value < 640) openSideNavOverlay.value = !openSideNavOverlay.value;
