@@ -123,9 +123,9 @@ class CoursesController extends Controller
      */
     public function destroy($id)
     {
-        $course = Courses::find($id); // Course Details
+        $course = Courses::find($id); // Getting the course details by id
 
-        $course_id = $course->id; // Id of Course
+        $course_id = $course->id; // $course->id is same with $id
 
         $course_episodes = DB::table('course_episodes')->where('course_id', $course_id)->get(); // Course Episodes
         // delete all episodes
@@ -150,7 +150,7 @@ class CoursesController extends Controller
             unlink(public_path() . $course->thumbnail);
         }
 
-        $course->delete();
+        $course->delete(); // delete the course in the actual database
         return redirect()->route('manageCourses');
     }
 }

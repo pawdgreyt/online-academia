@@ -134,24 +134,26 @@ const isNavOverlay = () => {
                         />
                     </Link>
 
-                    <div class="border-b border-b-gray-700 my-2.5"></div>
-                    <Link :href="route('addCourse')">
+                    <div v-if="$page.props.auth.user.role == 'admin'">
+                        <div class="border-b border-white my-2.5"></div>
+                        <Link :href="route('addCourse')">
+                            <SideNavItem
+                                :openSideNav="openSideNav"
+                                iconString="Create Course"
+                            />
+                        </Link>
+                        <Link :href="route('manageCourses')">
+                            <SideNavItem
+                                :openSideNav="openSideNav"
+                                iconString="Manage Courses"
+                            />
+                        </Link>
                         <SideNavItem
                             :openSideNav="openSideNav"
-                            iconString="Create Course"
+                            iconString="Manage Students"
                         />
-                    </Link>
-                    <Link :href="route('manageCourses')">
-                        <SideNavItem
-                            :openSideNav="openSideNav"
-                            iconString="Manage Courses"
-                        />
-                    </Link>
-                    <SideNavItem
-                        :openSideNav="openSideNav"
-                        iconString="Manage Students"
-                    />
-                    <div class="border-b border-b-gray-700 my-2.5"></div>
+                    </div>
+                    <div class="border-b border-white my-2.5"></div>
                     <SideNavItem
                         :openSideNav="openSideNav"
                         iconString="Courses"
@@ -203,19 +205,24 @@ const isNavOverlay = () => {
                 <Link :href="route('home')">
                     <SideNavItem :openSideNav="true" iconString="Home" />
                 </Link>
-                <div class="border-b border-white my-2.5"></div>
-                <Link :href="route('addCourse')"
-                    ><SideNavItem
-                        :openSideNav="true"
-                        iconString="Create Course"
-                /></Link>
-                <Link :href="route('manageCourses')">
+                <div v-if="$page.props.auth.user.role == 'admin'">
+                    <div class="border-b border-white my-2.5"></div>
+                    <Link :href="route('addCourse')"
+                        ><SideNavItem
+                            :openSideNav="true"
+                            iconString="Create Course"
+                    /></Link>
+                    <Link :href="route('manageCourses')">
+                        <SideNavItem
+                            :openSideNav="openSideNav"
+                            iconString="Manage Courses"
+                        />
+                    </Link>
                     <SideNavItem
-                        :openSideNav="openSideNav"
-                        iconString="Manage Courses"
+                        :openSideNav="true"
+                        iconString="Manage Students"
                     />
-                </Link>
-                <SideNavItem :openSideNav="true" iconString="Manage Students" />
+                </div>
                 <div class="border-b border-white my-2.5"></div>
                 <SideNavItem :openSideNav="true" iconString="Courses" />
                 <SideNavItem :openSideNav="true" iconString="My Library" />
