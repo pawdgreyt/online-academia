@@ -47,7 +47,7 @@ defineProps({ courses: Array });
                             <tbody>
                                 <div v-for="course in courses" :key="course">
                                     <tr
-                                        class="border-b flex items-center justify-center"
+                                        class="border-b flex items-center justify-center hover:bg-gray-600 rounded-sm"
                                     >
                                         <td
                                             class="px-6 py-4 w-4/12 text-sm font-medium text-white"
