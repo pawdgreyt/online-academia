@@ -1,66 +1,84 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Online Academia E-Learning System
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+This is an E-Learning System built using Laravel 10, Breeze, Socialite, Vue.js 3, Inertia Js, JavaScript and Tailwind CSS. The application features a fully responsive design. It includes a SideNavOverlay animation for seamless navigation and provides functionalities for adding and managing Courses.
 
-## About Laravel
+### Features
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+1. Login and Register: Securely log in to your account or create a new account to get started. Keep your personal information safe and accessible through our authentication system. You can also login using Github or Google.
+![image](https://github.com/pawdgreyt/online-academia/assets/52988042/7f8e8a00-b6a8-44bb-b687-26612a2ad045)
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+2. Profile Management: Easily manage your profile information.
+![image](https://github.com/pawdgreyt/online-academia/assets/52988042/80fd790f-ac64-4b83-91d3-fc66fa8626f2)
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+3. Responsive Design: Enjoy a seamless learning experience across various devices, including desktops, tablets, and smartphones. Our platform is designed to adapt to different screen sizes, ensuring comfortable access anytime, anywhere.
+![image](https://github.com/pawdgreyt/online-academia/assets/52988042/6d6db68c-da08-45c3-90ac-d0516c5a2279)
+![image](https://github.com/pawdgreyt/online-academia/assets/52988042/fe163d77-8e55-4452-8b85-0ff7a9ff05fc)
 
-## Learning Laravel
+4. Add Courses and Add Episodes: Create and publish new courses, providing valuable content to eager learners. Divide courses into episodes, making it easier for students to navigate and learn at their own pace.
+![image](https://github.com/pawdgreyt/online-academia/assets/52988042/c161da03-9b92-4751-bccb-bd1b44452ec8)
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+5. Manage and Delete Courses: Shows the table of all Courses. If a course is no longer relevant, educators can remove it from the platform. Deleting a course ensures that learners only have access to high-quality, current content.
+![image](https://github.com/pawdgreyt/online-academia/assets/52988042/0adfeb01-1d89-41a9-95ea-edf4ef5c7e6e)
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+6. View Course Page: Browse and discover a wide range of courses offered by our talented educators. Get a quick overview of course details, including descriptions, episode lists, and instructor information.
+![image](https://github.com/pawdgreyt/online-academia/assets/52988042/b5417693-503e-4582-8925-1c4babb89764)
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+7. Watch Episodes: Dive into course content by watching individual episodes. Take advantage of the flexibility to pause, rewind, or rewatch episodes to grasp the concepts effectively.
+![image](https://github.com/pawdgreyt/online-academia/assets/52988042/2a3ca2b3-6e9f-4920-9551-85734888ce36)
 
-## Laravel Sponsors
+### Installation
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+1. Clone this repository to your local machine or server:
 
-### Premium Partners
+   ```bash
+   git clone https://github.com/pawdgreyt/online-academia.git
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+2. Navigate to the project directory:
 
-## Contributing
+   ```bash
+   cd online-academia
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+3. Install PHP and Node.js dependencies:
 
-## Code of Conduct
+   ```bash
+   composer install
+   npm install
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+4. Rename .env.example to .env and configure your database settings.
+5. Also Open the .env file and set your GitHub OAuth application credentials:
+   
+   ```bash
+   GITHUB_CLIENT_ID=your-github-client-id
+   GITHUB_CLIENT_SECRET=your-github-client-secret
+   GITHUB_CALLBACK_URL=http://your-app-url/login/github/callback
+    
+   GOOGLE_CLIENT_ID=your-github-client-id
+   GOOGLE_CLIENT_SECRET=your-github-client-secret
+   GOOGLE_CALLBACK_URL=http://your-app-url/login/google/callback
 
-## Security Vulnerabilities
+6. Generate a new application key:
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+   ```bash
+   php artisan key:generate
 
-## License
+7. Generate a new application key:
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+   ```bash
+   php artisan key:generate
+
+8. Run database migration and seeders: 
+
+   ```bash
+   php artisan migrate
+   php artisan db:seed
+
+9. Start the development server and compile assets:
+
+   ```bash
+   php artisan serve
+   npm run dev
+
+11. Visit http://localhost:8000 in your browser to access the application.
+   
+
+   
