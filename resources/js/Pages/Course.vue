@@ -8,6 +8,17 @@ defineProps({
     course: Object,
     episodes: Array,
 });
+
+const trimLongText = (string, length) => {
+    if (string.length <= length) {
+        return string;
+    } else {
+        const trimmedString = string.slice(0, length).trim();
+        const trimmedStringWithEllipsis = trimmedString + "...";
+
+        return trimmedStringWithEllipsis;
+    }
+};
 </script>
 
 <template>
@@ -99,7 +110,12 @@ defineProps({
                                             {{ episode.episode_title }}
                                         </h3>
                                         <p class="text-gray-400">
-                                            {{ episode.episode_description }}
+                                            {{
+                                                trimLongText(
+                                                    episode.episode_description,
+                                                    150
+                                                )
+                                            }}
                                         </p>
                                     </div>
                                 </li>
