@@ -142,7 +142,7 @@ const isNavOverlay = () => {
                     </Link>
 
                     <div v-if="$page.props.auth.user.role == 'admin'">
-                        <div class="border-b border-white my-2.5"></div>
+                        <div class="border-b border-slate-700 my-2.5"></div>
                         <Link :href="route('addCourse')">
                             <SideNavItem
                                 :openSideNav="openSideNav"
@@ -160,7 +160,7 @@ const isNavOverlay = () => {
                             iconString="Manage Students"
                         />
                     </div>
-                    <div class="border-b border-white my-2.5"></div>
+                    <div class="border-b border-slate-700 my-2.5"></div>
                     <SideNavItem
                         :openSideNav="openSideNav"
                         iconString="Courses"
@@ -213,7 +213,7 @@ const isNavOverlay = () => {
                     <SideNavItem :openSideNav="true" iconString="Home" />
                 </Link>
                 <div v-if="$page.props.auth.user.role == 'admin'">
-                    <div class="border-b border-white my-2.5"></div>
+                    <div class="border-b border-slate-600 my-2.5"></div>
                     <Link :href="route('addCourse')"
                         ><SideNavItem
                             :openSideNav="true"
@@ -230,7 +230,7 @@ const isNavOverlay = () => {
                         iconString="Manage Students"
                     />
                 </div>
-                <div class="border-b border-white my-2.5"></div>
+                <div class="border-b border-slate-600 my-2.5"></div>
                 <SideNavItem :openSideNav="true" iconString="Courses" />
                 <SideNavItem :openSideNav="true" iconString="My Library" />
             </ul>
