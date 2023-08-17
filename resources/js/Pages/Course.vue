@@ -30,7 +30,9 @@ const trimLongText = (string, length) => {
                     <h2 class="text-xl font-semibold mb-4 text-white">
                         Course Overview
                     </h2>
-                    <p class="text-white mb-4">
+                    <p
+                        class="text-white mb-4 flex items-center justify-center text-justify"
+                    >
                         {{ course.overview }}
                     </p>
                 </div>
@@ -109,7 +111,9 @@ const trimLongText = (string, length) => {
                                         >
                                             {{ episode.episode_title }}
                                         </h3>
-                                        <p class="text-gray-400">
+                                        <p
+                                            class="text-gray-400 flex items-center justify-center text-justify"
+                                        >
                                             {{
                                                 trimLongText(
                                                     episode.episode_description,

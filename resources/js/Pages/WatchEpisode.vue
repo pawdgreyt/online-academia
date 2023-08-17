@@ -55,7 +55,7 @@ const trimLongText = (string, length) => {
                         </div>
                     </div>
                     <p
-                        class="text-gray-400 mt-2 flex items-center justify-center"
+                        class="text-gray-400 mt-2 flex items-center justify-center text-justify"
                     >
                         {{ episode_details.episode_description }}
                     </p>
