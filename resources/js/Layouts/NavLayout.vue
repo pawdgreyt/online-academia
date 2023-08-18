@@ -37,6 +37,8 @@ const isNavOverlay = () => {
         openSideNavOverlay.value = !openSideNavOverlay.value;
     if (usePage().url === "/manage-course")
         openSideNavOverlay.value = !openSideNavOverlay.value;
+    if (usePage().url === "/manage-students")
+        openSideNavOverlay.value = !openSideNavOverlay.value;
     if (usePage().url === "/profile")
         openSideNavOverlay.value = !openSideNavOverlay.value;
     if (width.value < 640) openSideNavOverlay.value = !openSideNavOverlay.value;
@@ -155,10 +157,12 @@ const isNavOverlay = () => {
                                 iconString="Manage Courses"
                             />
                         </Link>
-                        <SideNavItem
-                            :openSideNav="openSideNav"
-                            iconString="Manage Students"
-                        />
+                        <Link :href="route('manageStudents')">
+                            <SideNavItem
+                                :openSideNav="openSideNav"
+                                iconString="Manage Students"
+                            />
+                        </Link>
                     </div>
                     <div class="border-b border-slate-700 my-2.5"></div>
                     <SideNavItem
@@ -225,10 +229,12 @@ const isNavOverlay = () => {
                             iconString="Manage Courses"
                         />
                     </Link>
-                    <SideNavItem
-                        :openSideNav="true"
-                        iconString="Manage Students"
-                    />
+                    <Link :href="route('manageStudents')">
+                        <SideNavItem
+                            :openSideNav="true"
+                            iconString="Manage Students"
+                        />
+                    </Link>
                 </div>
                 <div class="border-b border-slate-600 my-2.5"></div>
                 <SideNavItem :openSideNav="true" iconString="Courses" />
