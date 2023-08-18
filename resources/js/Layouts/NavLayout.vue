@@ -48,6 +48,8 @@ const isNavOverlay = () => {
         openSideNavOverlay.value = !openSideNavOverlay.value;
     if (usePage().props.episode_details)
         openSideNavOverlay.value = !openSideNavOverlay.value;
+    if (usePage().props.student)
+        openSideNavOverlay.value = !openSideNavOverlay.value;
 };
 </script>
 
