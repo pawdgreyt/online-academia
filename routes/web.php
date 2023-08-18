@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ProviderController;
 use App\Http\Controllers\CoursesController;
+use App\Http\Controllers\StudentController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -24,6 +25,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/', function () { return Inertia::render('Welcome', [ 'courses' => Courses::OrderBy('id', 'DESC')->get() ]); })->name('home');
 
     Route::get('/manage-students', function () { return Inertia::render('ManageStudents', [ 'students' => User::where('role', 'student')->OrderBy('id', 'DESC')->get() ]); })->name('manageStudents');
+    Route::get('/view-student/{id}', [StudentController::class, 'show'])->name('student.show');
 
     Route::get('/view-course/{id}', [CoursesController::class, 'show'])->name('course.show');
     Route::get('/watch/{id}', [CoursesController::class, 'watchepisode'])->name('course.watchepisode');

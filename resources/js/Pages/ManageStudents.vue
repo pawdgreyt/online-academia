@@ -75,18 +75,28 @@ defineProps({ students: Array });
                                             {{ student.auth_type }}
                                         </td>
                                         <td class="py-4 w-3/12">
-                                            <button
-                                                :data-modal-target="
-                                                    'defaultModal' + student.id
+                                            <Link
+                                                :href="
+                                                    route('student.show', {
+                                                        id: student.id,
+                                                    })
                                                 "
-                                                :data-modal-toggle="
-                                                    'defaultModal' + student.id
-                                                "
-                                                class="block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm mr-4 px-5 py-2.5 dark:bg-blue-600 dark:hover:bg-blue-700 duration-300 dark:focus:ring-blue-800"
-                                                type="button"
                                             >
-                                                View
-                                            </button>
+                                                <button
+                                                    :data-modal-target="
+                                                        'defaultModal' +
+                                                        student.id
+                                                    "
+                                                    :data-modal-toggle="
+                                                        'defaultModal' +
+                                                        student.id
+                                                    "
+                                                    class="block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm mr-4 px-5 py-2.5 dark:bg-blue-600 dark:hover:bg-blue-700 duration-300 dark:focus:ring-blue-800"
+                                                    type="button"
+                                                >
+                                                    View
+                                                </button>
+                                            </Link>
                                         </td>
                                     </tr>
                                 </div>
