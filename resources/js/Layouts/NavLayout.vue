@@ -221,7 +221,7 @@ const isNavOverlay = () => {
                     /></Link>
                     <Link :href="route('manageCourses')">
                         <SideNavItem
-                            :openSideNav="openSideNav"
+                            :openSideNav="true"
                             iconString="Manage Courses"
                         />
                     </Link>

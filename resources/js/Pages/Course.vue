@@ -111,9 +111,7 @@ const trimLongText = (string, length) => {
                                         >
                                             {{ episode.episode_title }}
                                         </h3>
-                                        <p
-                                            class="text-gray-400 flex items-center justify-center text-justify"
-                                        >
+                                        <p class="text-gray-400">
                                             {{
                                                 trimLongText(
                                                     episode.episode_description,
