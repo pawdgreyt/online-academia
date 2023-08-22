@@ -22,7 +22,7 @@ const trimLongText = (string, length) => {
 </script>
 
 <template>
-    <Head title="Course" />
+    <Head :title="course.title" />
     <NavLayout>
         <main class="container mx-auto py-8">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
