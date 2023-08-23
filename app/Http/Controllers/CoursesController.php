@@ -97,9 +97,6 @@ class CoursesController extends Controller
         }
     }
 
-    /**
-     * Display the specified resource.
-     */
     public function show($id)
     {   
         return Inertia::render('Course', [
@@ -120,9 +117,6 @@ class CoursesController extends Controller
         ]);
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
     public function destroy($id)
     {
         $course = Courses::find($id); // Getting the course details by id
