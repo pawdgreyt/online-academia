@@ -119,9 +119,9 @@ class CoursesController extends Controller
 
     public function destroy($id)
     {
-        $course = Courses::find($id); // Getting the course details by id
+        $course = Courses::find($id);
 
-        $course_id = $course->id; // $course->id is same with $id
+        $course_id = $course->id;
 
         $course_episodes = DB::table('course_episodes')->where('course_id', $course_id)->get(); // Course Episodes
         // delete all episodes
